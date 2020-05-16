@@ -23,6 +23,6 @@ int main(){
 		system("pause");
 		goto Repetir;
 	}
-	cout << "O seu peso ideial é " << pesoIdeal << "\n\n";
+	cout << "O seu peso ideal é " << pesoIdeal << "\n\n";
 	system("pause");
 }
