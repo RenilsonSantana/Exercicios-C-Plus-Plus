@@ -10,7 +10,7 @@ int main(){
 	string msg;
 	Menu:
 		system("cls");
-		cout << "--------------- M E N U ---------------\n\n1)Execultar\n2)Finalizar\n";
+		cout << "--------------- M E N U ---------------\n\n1)Executar\n2)Finalizar\n";
 		ex = getch();
 		switch(ex){
 			case '1':
@@ -18,9 +18,9 @@ int main(){
 				cout << "Digite um ano: ";
 				cin >> ano;
 				if(ano%4 == 0)
-					msg = "O ano digitado é bissesto!\n\n";
+					msg = "O ano digitado é bissexto!\n\n";
 				else
-					msg = "O ano digitado não é bissesto!\n\n";
+					msg = "O ano digitado não é bissexto!\n\n";
 				break;
 			case '2':
 				exit(0);
