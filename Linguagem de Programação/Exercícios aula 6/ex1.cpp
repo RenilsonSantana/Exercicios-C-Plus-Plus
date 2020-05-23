@@ -24,7 +24,7 @@ int main(){
 				cin >> c;
 				system("cls");
 				delta = pow(b, 2) -4*a*c;
-				if(delta >= 0){
+				if(delta >= 0 && a != 0){
 					x1 = (-b + sqrt(delta)) / (a*2);
 					x2 = (-b - sqrt(delta)) / (a*2);
 					cout << "A = " << a << "\nB = " << b << "\nC = " << c << "\nDelta = " << delta << "\nX1 = " << x1 << "\nX2 = " << x2 << "\n\n";
