@@ -33,7 +33,7 @@ float lerDolar(){
 }
 
 float conversaoParaReais(float cot, float valor){
-	return  valor/cot;
+	return  valor*cot;
 }
 
 void imprimir(float reais){
