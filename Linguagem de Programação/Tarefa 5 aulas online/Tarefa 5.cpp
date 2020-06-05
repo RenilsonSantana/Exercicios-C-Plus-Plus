@@ -2,7 +2,7 @@
 #include <math.h>
 #include <locale.h>
 #include <conio.h>
-#include <stdio.h>
+#include <iomanip>
 using namespace std;
 double n1, n2, n3, media;
 void menu();
@@ -34,7 +34,7 @@ void menu(){
 			case '2':
 				system("cls");
 				media = calcMedia(n1, n2, n3);
-				cout << "MÉDIA CALCULADA\n\n";
+				cout << "\n\nMÉDIA CALCULADA\n\n";
 				system("pause");
 				break;
 			case '3':
@@ -73,6 +73,5 @@ float calcMedia(float a, float b, float c){
 }
 
 void exibir(float n1, float n2, float n3, float m){
-//	cout << "A média entre as notas: " << n1 << ", " << n2 << " e " << n3 << " é igual a " << float(m) << "\n\n";
-	printf("A média entre as notas: %.1f, %.1f e %.1f é igual a %.1f\n\n", n1, n2, n3, m);
+	cout << fixed << "A média entre as notas: " << setprecision(1) << n1 << ", " << setprecision(1) << n2 << " e " << setprecision(1) << n3 << " é igual a " << setfill('*') << setw(5) << setprecision(1) << m << "\n\n";
 }
