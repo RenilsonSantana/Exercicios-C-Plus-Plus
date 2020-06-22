@@ -1,4 +1,4 @@
-#include <iostream> //incluindo biblioteca de entrada e saida
+#include <iostream> //incluindo biblioteca de entrada e saída
 #include <cstdlib> //incluindo biblioteca de comandos do sistema
 #include <math.h> //incluindo biblioteca de operações matemáticas
 #include <iomanip> //incluindo biblioteca de formatação de saída
@@ -11,34 +11,34 @@ double ler_C ( ); //declarando função ler_C
 double cal_Delta ( double a, double b, double c); //declarando função cal_Delta
 double cal_x1 ( double a, double b, double delta ); //declarando função cal_x1
 double cal_x2 ( double a, double b, double delta ); //declarando função cal_x2
-void exibir ( double a, double b, double c, double delta ); //declrando função exibir
+void exibir ( double a, double b, double c, double delta ); //declarando função exibir
 
 //Função principal
 int main () {
   setlocale(LC_ALL, "Portuguese"); //formatando saída para português
   double a, b, c, delta; //declarando variaveis do tipo double
-  int tecla; //declando uma variavel do tipó int
+  int tecla; //declando uma variável do tipó int
   MENU:  /* marca um ponto no código para retornar aqui depois*/ 
   	system("cls"); //comando para limpar tela
   	cout << "MENU\n1 Executar\n2 Finalizar\nitem: "; //menu
-    cin >> tecla; //solucitando variavel para o usuario digitar
+    cin >> tecla; //solicitando variável para o usuário digitar
     switch(tecla){
       case 1:
-      	system("cls"); //limparando tela
-        a = ler_A ( ); //atribuindo o valor de uma função para uma variavel
-        b = ler_B ( ); //atribuindo o valor de uma função para uma variavel
-        c = ler_C ( ); //atribuindo o valor de uma função para uma variavel
+      	system("cls"); //limpando tela
+        a = ler_A ( ); //atribuindo o valor de uma função para uma variável
+        b = ler_B ( ); //atribuindo o valor de uma função para uma variável
+        c = ler_C ( ); //atribuindo o valor de uma função para uma variável
         
         //verificando de a é igual a 0
         if ( a == 0 ){
-          cout << "\nErro!'A' deve ser diferente de zero!"; // imprimeindo (Erro!'A' deve ser diferente de zero!) na tela
-		  //system("sleep 3"); Comando de linix (programa da um pause de 3 segundos)
+          cout << "\nErro!'A' deve ser diferente de zero!"; // imprimindo (Erro!'A' deve ser diferente de zero!) na tela
+		  //system("sleep 3"); Comando de linux (programa dá um pause de 3 segundos)
           exit(0); //finalizando programa
         } //finalizando if
         
         //caso a seja diferente de 0
         else {
-          delta = cal_Delta ( a, b, c ); //atribuindo o valor de uma função para uma variavel
+          delta = cal_Delta ( a, b, c ); //atribuindo o valor de uma função para uma variável
           exibir ( a, b, c, delta ); //chamando procedimento exibir
           system("pause"); //pausando programa
         } //finalizando else         
@@ -56,44 +56,44 @@ int main () {
 
 //Função para ler o valor de A
 double ler_A ( ){ 
-  double va; //criando variavel local
+  double va; //criando variável local
   cout << "Valor de A: "; //exibir (Valor de A: )
-  cin >> va; //solicitando um valor para variavel atravez do teclado
+  cin >> va; //solicitando um valor para variável através do teclado
   return va; //retornando valor digitado 
 } //finalizando função
 
 //Função para ler o valor de B
 double ler_B ( ) {
-  double vb; //criando variavel local
+  double vb; //criando variável local
   cout << "Valor de B: "; //exibir (Valor de B: )
-  cin >> vb; //solicitando um valor para variavel atravez do teclado
+  cin >> vb; //solicitando um valor para variável através do teclado
   return vb; //retornando valor digitado 
 } //finalizando função
 
 //Função para ler o valor de C
 double ler_C ( ) {
-  double vc; //criando variavel local
+  double vc; //criando variável local
   cout << "Valor de C: "; //exibir (Valor de C: )
-  cin >> vc; //solicitando um valor para variavel atravez do teclado
+  cin >> vc; //solicitando um valor para variável através do teclado
   return vc; //retornando valor digitado 
 } //finalizando função
 
 //Função para calcular o valor de Delta
 double cal_Delta ( double a, double b, double c){
-  double d = pow(b,2) - 4 * a * c; //atribuindo valor para variavel d atravez de uma operação matematica
-  return d; //retornando variavel d
+  double d = pow(b,2) - 4 * a * c; //atribuindo valor para variável d através de uma operação matematica
+  return d; //retornando variável d
 } //finalizando função
 
 //Função para calcular a primeira raiz da equação
 double cal_x1 ( double a, double b, double delta ) {
-  double x = (-b + sqrt(delta))/(2*a); //atribuindo valor para a variavel atravez de uma operação matematica
-  return x; //retornando variavel
+  double x = (-b + sqrt(delta))/(2*a); //atribuindo valor para a variável através de uma operação matematica
+  return x; //retornando variável
 } //finalizando função
 
 //Função para calcular a segunda raiz da equação
 double cal_x2 ( double a, double b, double delta ) {
-  double x = (-b - sqrt(delta))/(2*a); //atribuindo valor para a variavel atravez de uma operação matematica
-  return x; //retornando variavel
+  double x = (-b - sqrt(delta))/(2*a); //atribuindo valor para a variável através de uma operação matematica
+  return x; //retornando variável
 } //finalizando função
 
 //Procedimento para exibir todos os valores na tela
@@ -107,8 +107,8 @@ void exibir ( double a, double b, double c, double delta ) {
 
 //verificando se delta é maior ou igual a 0
   if (delta >= 0){
-    double x1 = cal_x1(a,b,delta); //atribuindo valor para x1 atravez de uma operação matematica
-    double x2 = cal_x2(a,b,delta); //atribuindo valor para x2 atravez de uma operação matematica
+    double x1 = cal_x1(a,b,delta); //atribuindo valor para x1 através de uma operação matematica
+    double x2 = cal_x2(a,b,delta); //atribuindo valor para x2 através de uma operação matematica
     cout << "\n\nValor de ....x1: " << setfill(' ') << setw(14) << setprecision(2) << x1; //imprimindo valor de x1
     cout << "\nValor de ....x2: " << setfill(' ') << setw(14) << setprecision(2) << x2 << endl << endl; //imprimindo valor de x2
   } //finalizando if
@@ -118,3 +118,4 @@ void exibir ( double a, double b, double c, double delta ) {
   } //finalizando else
   //system("sleep 3");
 } //finalizando procedimento
+
