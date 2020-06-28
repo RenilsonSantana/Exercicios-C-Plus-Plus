@@ -42,7 +42,7 @@ int main(){
 			case '4':
 				exit(0);
 		}
-	}while(tecla != 4);
+	}while(tecla != '4');
 }
 
 double lerValor(){
